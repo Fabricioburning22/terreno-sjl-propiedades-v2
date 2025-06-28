@@ -6,27 +6,27 @@ const GallerySection = () => {
 
   const images = [
     {
-      src: "/lovable-uploads/8af55c6f-ab28-4ca6-9b78-d1936f6e3701.png",
+      src: "/uploads/8af55c6f-ab28-4ca6-9b78-d1936f6e3701.png",
       title: "Vista Principal del Terreno",
       description: "120m² listos para construir"
     },
     {
-      src: "/lovable-uploads/7172a270-ec89-40c0-95ce-795baba12287.png",
+      src: "/uploads/7172a270-ec89-40c0-95ce-795baba12287.png",
       title: "Comunidad Unida",
       description: "Vecinos colaborativos"
     },
     {
-      src: "/lovable-uploads/eb451262-1306-4af9-a0e4-4cd616e13874.png",
+      src: "/uploads/eb451262-1306-4af9-a0e4-4cd616e13874.png",
       title: "Servicios Básicos",
       description: "Gas y otros servicios"
     },
     {
-      src: "/lovable-uploads/dcb38846-b9fa-4f39-b31b-19f70309b69c.png",
+      src: "/uploads/dcb38846-b9fa-4f39-b31b-19f70309b69c.png",
       title: "Ubicación Estratégica",
       description: "Cerca de Posta Montenegro"
     },
     {
-      src: "/lovable-uploads/54bdf3aa-fcdc-4024-9025-86318508843f.png",
+      src: "/uploads/54bdf3aa-fcdc-4024-9025-86318508843f.png",
       title: "Zona en Crecimiento",
       description: "Nuevos proyectos cercanos"
     }

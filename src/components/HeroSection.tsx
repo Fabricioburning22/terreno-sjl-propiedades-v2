@@ -122,7 +122,7 @@ const HeroSection = () => {
                 {/* Main Image - Sin overlays adicionales */}
                 <div className="relative">
                   <img
-                    src="/lovable-uploads/8af55c6f-ab28-4ca6-9b78-d1936f6e3701.png"
+                    src="/uploads/8af55c6f-ab28-4ca6-9b78-d1936f6e3701.png"
                     alt="Terreno en San Juan de Lurigancho"
                     className="w-full h-80 object-cover rounded-xl"
                     loading="lazy"
