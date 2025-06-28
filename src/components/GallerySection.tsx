@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { X } from "lucide-react";
 
@@ -34,7 +33,7 @@ const GallerySection = () => {
   ];
 
   return (
-    <section className="section-padding bg-gray-50">
+    <section id="gallery" className="section-padding bg-gray-50">
       <div className="container-custom">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold font-poppins text-gray-800 mb-6">
