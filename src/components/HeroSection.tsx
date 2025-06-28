@@ -3,36 +3,10 @@ import { useState, useEffect } from "react";
 
 const HeroSection = () => {
   const [counters, setCounters] = useState({
-    visitors: 0,
-    metro: 0,
-    growth: 0
+    visitors: 127,
+    metro: 30,
+    growth: 15
   });
-
-  // Animate counters on mount
-  useEffect(() => {
-    const animateCounter = (key: keyof typeof counters, target: number, duration = 2000) => {
-      const start = 0;
-      const increment = target / (duration / 16);
-      let current = start;
-
-      const timer = setInterval(() => {
-        current += increment;
-        if (current >= target) {
-          current = target;
-          clearInterval(timer);
-        }
-        setCounters(prev => ({ ...prev, [key]: Math.floor(current) }));
-      }, 16);
-    };
-
-    const timer = setTimeout(() => {
-      animateCounter('visitors', 127);
-      animateCounter('metro', 30);
-      animateCounter('growth', 15);
-    }, 500);
-
-    return () => clearTimeout(timer);
-  }, []);
 
   const handleWhatsAppClick = () => {
     const message = "Hola, estoy interesado en el terreno de 120m² en San Juan de Lurigancho por S/16,000. ¿Podrías darme más información?";
@@ -53,11 +27,11 @@ const HeroSection = () => {
       <div className="container-custom">
         <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
           {/* Left Column - Content */}
-          <div className="text-white space-y-8 animate-fade-in">
-            {/* Badge with pulse animation */}
+          <div className="text-white space-y-8">
+            {/* Badge */}
             <div className="inline-block">
-              <div className="bg-orange-500 text-white px-6 py-3 rounded-full font-bold text-sm animate-pulse inline-flex items-center space-x-2">
-                <span className="w-2 h-2 bg-white rounded-full animate-ping"></span>
+              <div className="bg-orange-500 text-white px-6 py-3 rounded-full font-bold text-sm flex items-center space-x-2">
+                <span className="w-2 h-2 bg-white rounded-full"></span>
                 <span>OPORTUNIDAD ÚNICA</span>
               </div>
             </div>
@@ -67,7 +41,7 @@ const HeroSection = () => {
               <h1 className="text-5xl lg:text-6xl font-bold font-poppins leading-tight">
                 TERRENO EN VENTA
               </h1>
-              <h2 className="text-4xl lg:text-5xl font-bold font-poppins bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent animate-fade-in">
+              <h2 className="text-4xl lg:text-5xl font-bold font-poppins bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">
                 San Juan de Lurigancho
               </h2>
             </div>
@@ -79,7 +53,7 @@ const HeroSection = () => {
                 <span className="text-5xl lg:text-6xl font-bold text-orange-400">
                   S/ 16,000
                 </span>
-                <span className="bg-green-500 text-white px-4 py-2 rounded-full text-sm font-bold animate-pulse">
+                <span className="bg-green-500 text-white px-4 py-2 rounded-full text-sm font-bold">
                   NEGOCIABLE
                 </span>
               </div>
@@ -105,10 +79,9 @@ const HeroSection = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <button
                 onClick={handleWhatsAppClick}
-                className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 hover:scale-105 shadow-2xl relative overflow-hidden group"
+                className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 hover:scale-105 shadow-2xl"
               >
-                <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></span>
-                <span className="relative flex items-center justify-center space-x-2">
+                <span className="flex items-center justify-center space-x-2">
                   <span>📱</span>
                   <span>Contactar por WhatsApp</span>
                 </span>
@@ -116,10 +89,9 @@ const HeroSection = () => {
               
               <button
                 onClick={scrollToGallery}
-                className="border-2 border-white text-white hover:bg-white hover:text-gray-800 px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 hover:scale-105 relative overflow-hidden group"
+                className="border-2 border-white text-white hover:bg-white hover:text-gray-800 px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 hover:scale-105"
               >
-                <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></span>
-                <span className="relative flex items-center justify-center space-x-2">
+                <span className="flex items-center justify-center space-x-2">
                   <span>📷</span>
                   <span>Ver Fotos</span>
                 </span>
@@ -128,12 +100,9 @@ const HeroSection = () => {
           </div>
 
           {/* Right Column - Land Image */}
-          <div className="relative animate-fade-in">
-            <div className="relative transform hover:scale-105 transition-transform duration-300" style={{ perspective: '1000px' }}>
-              <div 
-                className="bg-white rounded-2xl p-4 shadow-2xl"
-                style={{ transform: 'perspective(1000px) rotateY(-5deg) rotateX(5deg)' }}
-              >
+          <div className="relative">
+            <div className="relative transform hover:scale-105 transition-transform duration-300">
+              <div className="bg-white rounded-2xl p-4 shadow-2xl transform perspective-1000 rotate-y-[-5deg] rotate-x-[5deg]">
                 {/* Status Badge */}
                 <div className="absolute -top-3 left-4 z-10">
                   <div className="bg-purple-600 text-white px-4 py-2 rounded-full font-bold text-sm flex items-center space-x-2">
@@ -145,7 +114,7 @@ const HeroSection = () => {
                 {/* Availability Badge */}
                 <div className="absolute -top-3 right-4 z-10">
                   <div className="bg-green-500 text-white px-4 py-2 rounded-full font-bold text-sm flex items-center space-x-2">
-                    <span className="w-2 h-2 bg-white rounded-full animate-ping"></span>
+                    <span className="w-2 h-2 bg-white rounded-full"></span>
                     <span>Disponible Ahora</span>
                   </div>
                 </div>
@@ -156,6 +125,7 @@ const HeroSection = () => {
                     src="/lovable-uploads/8af55c6f-ab28-4ca6-9b78-d1936f6e3701.png"
                     alt="Terreno en San Juan de Lurigancho"
                     className="w-full h-80 object-cover rounded-xl"
+                    loading="lazy"
                   />
                   
                   {/* Property Info Overlay */}
