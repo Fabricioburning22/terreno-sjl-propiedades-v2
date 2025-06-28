@@ -101,8 +101,8 @@ const HeroSection = () => {
 
           {/* Right Column - Land Image */}
           <div className="relative">
-            <div className="relative transform hover:scale-105 transition-transform duration-300">
-              <div className="bg-white rounded-2xl p-4 shadow-2xl transform perspective-1000 rotate-y-[-5deg] rotate-x-[5deg]">
+            <div className="relative transform perspective-1000 hover:scale-105 transition-all duration-500 ease-out" style={{ transform: 'rotateY(-8deg) rotateX(5deg)' }}>
+              <div className="bg-white rounded-2xl p-4 shadow-2xl hover:shadow-3xl transition-all duration-500" style={{ transform: 'hover:rotateY(0deg) hover:rotateX(0deg)' }}>
                 {/* Status Badge */}
                 <div className="absolute -top-3 left-4 z-10">
                   <div className="bg-purple-600 text-white px-4 py-2 rounded-full font-bold text-sm flex items-center space-x-2">
@@ -119,7 +119,7 @@ const HeroSection = () => {
                   </div>
                 </div>
 
-                {/* Main Image */}
+                {/* Main Image - Sin overlays adicionales */}
                 <div className="relative">
                   <img
                     src="/lovable-uploads/8af55c6f-ab28-4ca6-9b78-d1936f6e3701.png"
@@ -127,33 +127,6 @@ const HeroSection = () => {
                     className="w-full h-80 object-cover rounded-xl"
                     loading="lazy"
                   />
-                  
-                  {/* Property Info Overlay */}
-                  <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm rounded-lg p-3">
-                    <div className="text-purple-600 font-bold text-lg">M12</div>
-                    <div className="text-gray-800 font-semibold">120</div>
-                    <div className="text-gray-600 text-sm">x 60</div>
-                  </div>
-
-                  {/* Features Icons */}
-                  <div className="absolute top-4 left-4 flex flex-col space-y-2">
-                    <div className="bg-white/90 backdrop-blur-sm rounded-lg p-2 flex items-center space-x-2">
-                      <span className="text-green-600">📋</span>
-                      <span className="text-xs font-medium text-gray-800">Papeles en Regla</span>
-                    </div>
-                    <div className="bg-white/90 backdrop-blur-sm rounded-lg p-2 flex items-center space-x-2">
-                      <span className="text-green-600">🏠</span>
-                      <span className="text-xs font-medium text-gray-800">Listo para Construir</span>
-                    </div>
-                    <div className="bg-white/90 backdrop-blur-sm rounded-lg p-2 flex items-center space-x-2">
-                      <span className="text-green-600">💰</span>
-                      <span className="text-xs font-medium text-gray-800">Precio Negociable</span>
-                    </div>
-                    <div className="bg-white/90 backdrop-blur-sm rounded-lg p-2 flex items-center space-x-2">
-                      <span className="text-green-600">⚡</span>
-                      <span className="text-xs font-medium text-gray-800">Con Servicios</span>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>

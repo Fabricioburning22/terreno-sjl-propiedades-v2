@@ -136,6 +136,20 @@
   .container-custom {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
+
+  /* Efecto 3D personalizado para la imagen */
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  
+  .image-3d {
+    transform: rotateY(-8deg) rotateX(5deg);
+    transition: transform 0.5s ease-out;
+  }
+  
+  .image-3d:hover {
+    transform: rotateY(0deg) rotateX(0deg) scale(1.02);
+  }
 }
 
 /* Smooth scrolling */
